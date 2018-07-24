@@ -84,7 +84,7 @@ def propmerge(into, data_from):
 
             elif subprop == 'type':
                 if spval != new_sp[subprop]:
-                    raise TypeError("Type cannot conflict in allOf'")
+                    new_sp[subprop] = spval
 
             elif subprop in ('minLength', 'minimum'):
                 new_sp[subprop] = (new_sp[subprop] if
